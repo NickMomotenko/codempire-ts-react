@@ -2,11 +2,10 @@ import React from "react";
 import { useData } from "../../hooks/data";
 
 import { LogoWrapp, LogoIcon, LogoText } from "./styles";
-
-interface LogoProps {}
+import { LogoProps } from "./interface";
 
 const Logo: React.FC<LogoProps> = () => {
-  const { data} = useData();
+  const { data } = useData();
 
   return (
     <LogoWrapp href="#">

@@ -1,26 +1,24 @@
 import React from "react";
 
-import styled from "styled-components";
+import {AppWrapp } from './AppStyles'
 
 import { useData } from "./hooks/data";
 
 import Header from "./components/Header";
-
 import Comment from "./components/Comment";
+
 import Container from "./UI/Container";
 import Item from "./UI/Item";
 import List from "./UI/List";
 import Main from "./UI/Main";
 import Title from "./UI/Title";
 
-export const AppWrapp = styled.div``;
-
 const App = () => {
   const { data, categories, activeCategorie, changeActiveCategorie, joke } =
     useData();
 
   return (
-    <div>
+    <AppWrapp>
       <Header />
       <Main>
         <Container>
@@ -39,7 +37,7 @@ const App = () => {
           <Comment text={activeCategorie ? joke?.value : data?.value} />
         </Container>
       </Main>
-    </div>
+    </AppWrapp>
   );
 };
 

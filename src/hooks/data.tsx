@@ -1,17 +1,15 @@
 import { useState, useEffect } from "react";
 
+import { Data } from "./interface";
+
 const categoriesUrl = `https://api.chucknorris.io/jokes/categories`;
 const randomDataUrl = `https://api.chucknorris.io/jokes/random`;
 
-interface data {
-  icon_url?: string;
-}
-
 export const useData = () => {
-  const [data, setData] = useState<data>();
+  const [data, setData] = useState<Data>();
   const [categories, setCategories] = useState<string[]>();
   const [activeCategorie, setActiveCategorie] = useState<string>();
-  const [joke, setJoke] = useState<{}>("");
+  const [joke, setJoke] = useState<string>("");
 
   const fetchedData = (url: string, func: (data: any) => void) => {
     fetch(url)
