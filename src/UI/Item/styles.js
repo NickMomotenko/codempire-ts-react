@@ -14,8 +14,8 @@ export const ItemWrapp = styled.div`
   text-align: center;
   line-height: 57px;
   cursor: pointer;
-  margin-right: 20px;
-
+  margin: 0 20px 20px 0;
+  box-shadow: 0 0px 6px #9a979717;
   transition: color, background 0.4s;
 
   ${(props) =>
